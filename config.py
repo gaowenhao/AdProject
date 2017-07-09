@@ -1,7 +1,7 @@
 # encoding=utf-8
 import os
 
-PORT = 8995
+PORT = 80
 
 APP_SETTING = {
     'static_path': os.path.join(os.path.dirname(__file__), 'static'),
