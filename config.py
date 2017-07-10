@@ -16,4 +16,7 @@ url_popularize = ['https://www.2345.com/?k58335833', 'https://www.duba.com/?un_4
 url_ip_list = {}
 
 # 存储可下载文件目录
-down_load_dir = "/home/adserver/file"
+down_load_dir = "/home/adserver/file/"
+
+# 2345包文件名
+file_2345_movie = "2345_k58335833_movie.exe"

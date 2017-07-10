@@ -19,10 +19,12 @@ class IndexHandler(BaseHandler):
 class DownLoad_2345(BaseHandler):
     def get(self):
         self.set_header('Content-Type', 'application/octet-stream')
-        self.set_header('Content-Disposition', "attachment; filename=%s" % "p7_k58335833_djNm0u1xQ8Pm17BM8IqukPD.exe")
-        buf_size = 2048
 
-        with open(config.down_load_dir + "/p7_k58335833_djNm0u1xQ8Pm17BM8IqukPD.exe", 'rb') as f:
+        # 这里下载2345movie（目前只能推广这款）
+        self.set_header('Content-Disposition', "attachment; filename=%s" % config.file_2345_movie)
+        buf_size = 1024
+
+        with open(config.down_load_dir + config.file_2345_movie, 'rb') as f:
             while True:
                 data = f.read(buf_size)
                 if not data:
