@@ -14,3 +14,6 @@ url_popularize = ['https://www.2345.com/?k58335833', 'https://www.duba.com/?un_4
                   'https://123.sogou.com/?22417-0755']
 # 用于存储当日用户的
 url_ip_list = {}
+
+# 存储可下载文件目录
+down_load_dir = "/home/adserver/file"

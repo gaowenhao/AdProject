@@ -13,7 +13,8 @@ from view import main_view as mv
 def build_app():
     return tornado.web.Application(handlers=[
         url(r'/', mv.IndexHandler),  # 网址主页
-        url(r'/url_popularize', mv.URL_Popularize)  # 网址推广
+        url(r'/url_popularize', mv.URL_Popularize),  # 网址推广
+        url(r'/down_load_2345', mv.DownLoad_2345)  # 2345软件下载
     ], **config.APP_SETTING)
 
 
