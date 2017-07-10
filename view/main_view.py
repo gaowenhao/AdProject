@@ -11,7 +11,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class IndexHandler(BaseHandler):
     def get(self, *args, **kwargs):
-        self.write("网站正在部署中")
+        self.render('index.html')
 
 
 class URL_Popularize(BaseHandler):
