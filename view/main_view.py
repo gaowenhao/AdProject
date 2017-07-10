@@ -9,6 +9,11 @@ class BaseHandler(tornado.web.RequestHandler):
         return self.get_secure_cookie('user')
 
 
+class IndexHandler(BaseHandler):
+    def get(self, *args, **kwargs):
+        self.write("网站正在部署中")
+
+
 class URL_Popularize(BaseHandler):
     def get(self, *args, **kwargs):
         user_ip = self.request.remote_ip
@@ -16,7 +21,7 @@ class URL_Popularize(BaseHandler):
 
         try:
             user_access_val = config.url_ip_list[user_ip]
-            if user_access_val > len(config.url_popularize) + 1:
+            if user_access_val >= len(config.url_popularize):
                 ready_url = config.url_popularize[0]
             else:
                 ready_url = config.url_popularize[user_access_val]
