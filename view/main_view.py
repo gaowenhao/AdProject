@@ -22,7 +22,7 @@ class DownLoad_2345(BaseHandler):
         self.set_header('Content-Disposition', "attachment; filename=%s" % "p7_k58335833_djNm0u1xQ8Pm17BM8IqukPD.exe")
         buf_size = 2048
 
-        with open(config.down_load_dir, 'rb') as f:
+        with open(config.down_load_dir + "/p7_k58335833_djNm0u1xQ8Pm17BM8IqukPD.exe", 'rb') as f:
             while True:
                 data = f.read(buf_size)
                 if not data:
