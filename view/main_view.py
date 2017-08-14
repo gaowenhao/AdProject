@@ -50,3 +50,8 @@ class URL_Popularize(BaseHandler):
             config.url_ip_list[user_ip] = 1
 
         self.redirect(ready_url)
+
+class GETIP(BaseHandler):
+    def get(self, *args, **kwargs):
+        user_ip = self.request.remote_ip
+        print(user_ip)
